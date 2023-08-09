@@ -27,7 +27,10 @@ p,h1,h2,h3,h4,h5,h6 {
 
 .list {list-style-type: none;}
 
-img {display: block;}
+img {
+       display: block;
+       max-width: 100%;
+height: auto;}
 
 /* ----------------header-----*/
 .header {
@@ -36,7 +39,8 @@ img {display: block;}
 }
 
 .container {
-        max-width: 1158px;
+        width: 100%;
+       /* max-width: 1158px;*/
         padding-left: 15px;
         padding-right: 15px;
         margin: 0 auto;
@@ -80,71 +84,7 @@ img {display: block;}
         letter-spacing: 0.03em;
         color: #F4F4FD;}
 
-.header-menu {
-        padding-left: 0;
-        margin: 0px;
-        
-        display: flex;
-        align-items: center;
-        gap: 40px;}
 
-.header-address {
-        margin-left: auto;
-        font-style: normal;
-}
-
-.header-menu-link {
-        font-family: 'Roboto';
-                font-weight: 500;
-                font-size: 16px;
-                line-height: 1.5;
-                letter-spacing: 0.02em;
-                cursor: pointer;
-                display: block;
-                padding: 24px 0;
-                color: var(--title-color);
-                position: relative;
-                transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-        
-        }
-
-.psevdo {
-        position: relative;
-        color: #404bbf;
-        
-}
-
-.psevdo::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        width: 100%;
-        bottom: -1px;
-        height: 4px;
-        background-color: #404bbf;
-        border-radius: 2px;
-}
-
-
-.header-menu-link:hover {color: #404bbf;}
-
-.header-menu-link:focus {color: #404bbf;}
-
-.header-menu-contact {
-        font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 1.5;
-        letter-spacing: 0.02em;
-        display: flex;
-        color: var(--second-text-color);
-        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.header-menu-contact:hover {color: #404bbf;}
-
-.header-menu-contact:focus {color: #404bbf;}
 
 /** -------------------Hero---------------- */
 
@@ -160,18 +100,7 @@ img {display: block;}
         margin:auto;
 }
 
-.hero-title {
-        max-width: 496px;
-        font-weight: 700;
-        font-size: 56px;
-        line-height: 1.07;
-        text-align: center;
-        letter-spacing: 0.02em;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 48px;
-        color: #FFFFFF;
-}
+
 
 .hero-btn {
         font-family: 'Roboto', sans-serif;
@@ -198,13 +127,17 @@ img {display: block;}
 
 /** -------------------Benefits------------ */
 .benefits-section {
-        padding-top: 120px;
-        padding-bottom: 120px;
+       /** padding-top: 120px;
+        padding-bottom: 120px;**/
+        padding-top: 96px;
+        padding-bottom: 96px;
 }
 
 .benefits {
         display: flex;
-        gap: 24px;
+        flex-wrap: wrap;
+      /** gap: 72px;*/
+        /*gap: 24px;*/
 }
 
 .list {
@@ -225,40 +158,14 @@ img {display: block;}
         overflow: hidden;
 }
 
-.benefits list {padding-left: 0;}
+/*.benefits list {padding-left: 0;}*/
 
-.benefits-item {
+/*.benefits-item {
+        width: 100%;
         width: calc((100% - 72px) / 4);
-}
-
-.benefits-item-list {
-        display: flex;
-        height: 112px;
-        align-items: center;
-        justify-content: center;
-        background-color: #f4f4fd;;
-        border-radius: 4px;
-        margin-bottom: 8px;
-}
+}*/
 
 
-.benefits-subtitle {
-        margin-bottom: 8px;
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 1.2;
-        letter-spacing: 0.02em;
-        width: calc((100% - 48px)/3);
-        color: #2E2F42;
-}
-
-.benefits-item-text {
-        
-        font-size: 16px;
-        line-height: 1.5;
-        letter-spacing: 0.02em;
-        color: var(--second-text-color);
-}
 
 /**-----------------------Section3----------*/
 .electronica-section {
@@ -289,7 +196,6 @@ img {display: block;}
 
 /** -------------------Team------------ */
 .team {
-        padding: 120px 0 120px;
         background-color: #F4F4FD;}
 
 .team-title {
@@ -304,10 +210,11 @@ img {display: block;}
         color: #2E2F42;
 }
 
-.teamlist {
+/*.teamlist {
         display: flex;
+        flex-wrap: wrap;
         gap: 24px;
-}
+        }*/
 
 .team-item {
         background-color: #FFFFFF;
@@ -322,7 +229,7 @@ img {display: block;}
 
 .team-icons-list {
         justify-content: center;
-        display: flex;
+       display: flex;
         gap: 24px;
      }
 
@@ -369,34 +276,27 @@ img {display: block;}
         color: var(--second-text-color);
 }
 
+
 /* -------------------------------------------clients----------------------------------------- */
-.client-section {
-padding-top: 120px;
+/*.client-section 
+/*padding-top: 120px;
 padding-bottom: 120px;
-}
+}*/
 
 .container-client {
 
 }
 
-.clients-title {
+/*.clients-title {
         font-size: 36px;
         line-height: 1.11;
         text-align: center;
         color: var(--title-color);      
         margin-bottom: 72px;
-}
+}*/
 
-.clients-list {
-        display: flex;
-        gap: 24px;
-        padding-left: 0;
-}
 
-.clients-item {
-        width: calc((100% - 120px) / 6);
-        height: 88px;
-}
+
 
 
 .clients-link {
@@ -427,21 +327,19 @@ padding-bottom: 120px;
 
 
 /** -------------------Footer---------------- */
-.footer {
+/*.footer {
         padding-top: 100px;
         padding-bottom: 100px;
         background-color: var(--title-color);
-}
+}*/
 
-.container-footer {
-        display: flex;
-        align-items: baseline;
-}
+
 
 
 
 .footer-infa {
         margin-right: 120px;
+        padding-bottom: 72px;
 }
 
 .footer-logo {
@@ -496,8 +394,8 @@ padding-bottom: 120px;
 }
 
 .footer-icons-title {
-        width: 40px;
-        height: 40px;
+       width: 40px;
+       height: 40px;
 }
 
 .footer-icons-link {
@@ -531,10 +429,11 @@ padding-bottom: 120px;
 
 /** -------------------FooterContinue---------------- */
 .footer-forma {
-        margin-left: auto;
+       /* margin-left: auto;*/
 }
 
 .footer-form-text {
+        padding-top: 72px;
         font-weight: 500;
         font-size: 16px;
         line-height: 1.5;
@@ -557,10 +456,10 @@ padding-bottom: 120px;
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
         border-radius: 4px;
         background-color: transparent;
-       
+
         padding: 8px 16px;
         color: #ffffff;
-        width: 264px;
+        width: 200px;
         height: 40px;
 }
 
@@ -579,20 +478,23 @@ padding-bottom: 120px;
         letter-spacing: 0.04em;
         color: #ffffff;
         background-color: #4d5ae5;
-        padding: 10px 24px;
+        padding: 10px 10px;
         border: none;
         border-radius: 4px;
         display: flex;
+        flex-wrap: wrap;
         cursor: pointer;
         justify-content: center;
         align-items: center;
         height: 40px;
-        min-width: 165px;
+        min-width: 10px;
 }
 
 .icon-telegram {
         color: #ffffff;
         margin-left: 16px;
+        /*display: flex;*/
+        flex-wrap: wrap;
 }
 
 /** -------------------Portfolio---------------- */
